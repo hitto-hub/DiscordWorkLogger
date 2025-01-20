@@ -1,6 +1,6 @@
 services:
   python-app:
-    image: python:3.13  # Python 3.10 ベースイメージを使用
+    image: python:3.13  # Python 3.13 ベースイメージを使用
     container_name: discord-bot
     working_dir: /app  # コンテナ内の作業ディレクトリ
     volumes:
