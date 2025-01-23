@@ -105,7 +105,7 @@ DiscordWorkLogger は、Discord Bot を使用して出勤・退勤メッセー�
 
 ```tree
 DiscordWorkLogger/
-├── bot.py                 # Discord Bot のメインスクリプト
+├── main.py                 # Discord Bot のメインスクリプト
 ├── gas_script.js          # Google Apps Script
 ├── user_gas_mapping.json  # ユーザー ID と GAS URL のマッピング
 ├── .env                   # 環境変数ファイル
