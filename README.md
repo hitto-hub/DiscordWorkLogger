@@ -66,7 +66,7 @@ DiscordWorkLogger は、Discord Bot を使用して出勤・退勤メッセー�
 1. **Python スクリプトを実行**
 
    ```bash
-   python bot.py
+   python main.py
    ```
 
 2. **Discord チャンネルで出勤・退勤メッセージを送信**
