@@ -71,6 +71,7 @@ DiscordWorkLogger は、Discord Bot を使用して出勤・退勤メッセー�
 
 2. **Discord チャンネルで出勤・退勤メッセージを送信**
    - 出勤メッセージ: 「おはよう」
+       - 出社メッセージ: 「出社」
    - 退勤メッセージ: 「お疲れ」
 
 3. **リアクションで結果を確認**
@@ -81,6 +82,8 @@ DiscordWorkLogger は、Discord Bot を使用して出勤・退勤メッセー�
 ---
 
 ## Google Apps Script (GAS) の設定
+
+**[わかりやすいデプロイ方法](https://coffee-soldier-56f.notion.site/gas-188729a7cf0380e89c74ca1d8d68d66d)**はこちら
 
 1. **GAS プロジェクトを作成**
    - Google ドライブで新しいスクリプトプロジェクトを作成します。
