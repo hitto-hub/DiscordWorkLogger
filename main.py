@@ -58,7 +58,10 @@ async def on_message(message):
     # メッセージ内容に応じてアクションを設定
     data = None
     if "おはよう" in message.content:
-        data = {"action": "oha"}
+        if "出社" in message.content:
+            data = {"action": "oha1"}
+        else:
+            data = {"action": "oha2"}
     elif "お疲れ" in message.content:
         data = {"action": "otu"}
 

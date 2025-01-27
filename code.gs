@@ -4,10 +4,18 @@ function doPost(e) {
     var params = JSON.parse(e.postData.contents);
     var action = params.action; // 実行するアクション ('出勤' または '退勤')
 
-    if (action === 'oha') {
-      出勤時間を記入();
-      return ContentService.createTextOutput(JSON.stringify({ status: 'success', message: '出勤時間を記入しました。' }))
+    if (action === 'oha1') {
+      // D列に「出勤」
+      出勤時間を記入("出勤");
+      return ContentService.createTextOutput(JSON.stringify({ status: 'success', message: '出勤(社内)を記入しました。' }))
         .setMimeType(ContentService.MimeType.JSON);
+
+    } else if (action === 'oha2') {
+      // D列に「在宅」
+      出勤時間を記入("在宅");
+      return ContentService.createTextOutput(JSON.stringify({ status: 'success', message: '出勤(在宅)を記入しました。' }))
+        .setMimeType(ContentService.MimeType.JSON);
+
     } else if (action === 'otu') {
       退勤時間を記入();
       return ContentService.createTextOutput(JSON.stringify({ status: 'success', message: '退勤時間を記入しました。' }))
@@ -22,7 +30,7 @@ function doPost(e) {
   }
 }
 
-function 出勤時間を記入() {
+function 出勤時間を記入(mode) {
   var sheet = getCurrentSheet();
   if (!sheet) {
     return;
@@ -41,6 +49,8 @@ function 出勤時間を記入() {
 
     if (formattedDateCell == today) {
       var currentTime = Utilities.formatDate(new Date(), Session.getScriptTimeZone(), 'H:mm');
+      // D列（4列目）に「出勤」または「在宅」
+      sheet.getRange(i, 4).setValue(mode);
       sheet.getRange(i, 5).setValue(currentTime); // E列に出勤時間を記入
       break;
     }
