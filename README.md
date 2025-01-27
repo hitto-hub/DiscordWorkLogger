@@ -38,8 +38,8 @@ DiscordWorkLogger は、Discord Bot を使用して出勤・退勤メッセー�
 
      ```json
      {
-       "123456789012345678": "https://script.google.com/macros/s/your_gas_url_for_user_1",
-       "876543210987654321": "https://script.google.com/macros/s/your_gas_url_for_user_2"
+       "123456789012345678": "https://script.google.com/macros/s/abc1234567890/exec",
+       "876543210987654321": "https://script.google.com/macros/s/def0987654321/exec"
      }
      ```
 
